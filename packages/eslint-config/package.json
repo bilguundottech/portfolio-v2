@@ -1,0 +1,14 @@
+{
+  "name": "@workspace/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.js",
+    "next.js"
+  ],
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript-eslint": "latest"
+  }
+}
