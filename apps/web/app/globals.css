@@ -194,6 +194,10 @@
     line-height: 1;
   }
 
+  .dark .section-number {
+    opacity: 0.6;
+  }
+
   /* Exposed grid lines background */
   .grid-brutal {
     background-image:
