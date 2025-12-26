@@ -125,4 +125,113 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* === BRUTALIST UTILITIES === */
+@layer utilities {
+  /* Heavy borders - signature brutalist element */
+  .border-brutal {
+    border-width: 2px;
+    border-color: var(--foreground);
+  }
+
+  .border-brutal-lg {
+    border-width: 3px;
+    border-color: var(--foreground);
+  }
+
+  /* Sharp shadows - offset, no blur */
+  .shadow-brutal {
+    box-shadow: 4px 4px 0 0 var(--foreground);
+  }
+
+  .shadow-brutal-lg {
+    box-shadow: 6px 6px 0 0 var(--foreground);
+  }
+
+  .shadow-brutal-primary {
+    box-shadow: 4px 4px 0 0 var(--primary);
+  }
+
+  /* Hover states - lift effect */
+  .hover-brutal {
+    transition: transform 150ms ease, box-shadow 150ms ease;
+  }
+
+  .hover-brutal:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 var(--foreground);
+  }
+
+  .hover-brutal:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 0 var(--foreground);
+  }
+
+  /* No border radius - sharp edges */
+  .brutal-sharp {
+    border-radius: 0 !important;
+  }
+
+  /* Monospace accent text */
+  .font-mono-accent {
+    font-family: var(--font-geist-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* Section numbering style */
+  .section-number {
+    font-family: var(--font-geist-mono);
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary);
+    opacity: 0.15;
+    line-height: 1;
+  }
+
+  /* Exposed grid lines background */
+  .grid-brutal {
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Link with animated underline */
+  .link-brutal {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .link-brutal::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 200ms ease;
+  }
+
+  .link-brutal:hover::after {
+    width: 100%;
+  }
+}
+
+/* Custom selection color */
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Focus states for accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
