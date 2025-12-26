@@ -34,11 +34,11 @@ export function ProjectCard({
       className="block group"
     >
       <Card
-        className={`brutal-sharp border-brutal shadow-brutal hover-brutal h-full transition-colors ${
+        className={`brutal-sharp border-brutal shadow-brutal hover-brutal h-full transition-colors px-2 ${
           featured ? "border-brutal-lg" : ""
         }`}
       >
-        <CardHeader className="border-b-2 border-foreground/10 pb-4">
+        <CardHeader className="border-b-2 border-foreground/10 pb-4 px-4">
           <div className="flex items-center justify-between mb-2">
             <Badge
               variant="outline"
@@ -55,12 +55,12 @@ export function ProjectCard({
             {title}
           </CardTitle>
         </CardHeader>
-        <CardContent className="pt-4">
+        <CardContent className="pt-4 px-4">
           <CardDescription className="text-base text-muted-foreground leading-relaxed">
             {description}
           </CardDescription>
         </CardContent>
-        <CardFooter className="flex gap-2 flex-wrap pt-4">
+        <CardFooter className="flex gap-2 flex-wrap pt-4 px-4">
           {tags.map((tag) => (
             <Badge
               key={tag}
