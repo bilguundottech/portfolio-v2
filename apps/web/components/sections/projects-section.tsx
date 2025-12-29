@@ -21,6 +21,7 @@ export function ProjectsSection() {
               year={project.year}
               link={project.link}
               featured={project.featured}
+              isInternal={"isInternal" in project ? project.isInternal : false}
             />
           ))}
         </div>

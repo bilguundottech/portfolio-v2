@@ -36,37 +36,17 @@ export const SOCIAL_LINKS = [
   },
 ] as const;
 
-// TODO: Replace with your real projects
 export const PROJECTS = [
   {
     id: 1,
-    title: "Project Name",
+    title: "What Did I Learn Today",
     description:
-      "Brief description of what this project does and the problem it solves.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    year: "2024",
-    link: "https://github.com/bilguundottech",
+      "A daily log of technical discoveries and lessons learned. Topics include databases, system design, web development patterns, and more.",
+    tags: ["Learning", "Documentation", "Growth"],
+    year: "2025",
+    link: "/wdilt",
     featured: true,
-  },
-  {
-    id: 2,
-    title: "Project Name",
-    description:
-      "Brief description of what this project does and the problem it solves.",
-    tags: ["React", "NestJS", "Supabase"],
-    year: "2024",
-    link: "https://github.com/bilguundottech",
-    featured: true,
-  },
-  {
-    id: 3,
-    title: "Project Name",
-    description:
-      "Brief description of what this project does and the problem it solves.",
-    tags: ["TypeScript", "Firebase", "Turborepo"],
-    year: "2023",
-    link: "https://github.com/bilguundottech",
-    featured: false,
+    isInternal: true,
   },
 ] as const;
 

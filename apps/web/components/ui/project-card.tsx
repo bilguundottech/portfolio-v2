@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import {
   Card,
@@ -16,6 +17,7 @@ interface ProjectCardProps {
   year: string;
   link: string;
   featured?: boolean;
+  isInternal?: boolean;
 }
 
 export function ProjectCard({
@@ -25,14 +27,15 @@ export function ProjectCard({
   year,
   link,
   featured,
+  isInternal = false,
 }: ProjectCardProps) {
+  const Wrapper = isInternal ? Link : "a";
+  const wrapperProps = isInternal
+    ? { href: link }
+    : { href: link, target: "_blank", rel: "noopener noreferrer" };
+
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block group"
-    >
+    <Wrapper {...wrapperProps} className="block group">
       <Card
         className={`brutal-sharp border-brutal shadow-brutal hover-brutal h-full transition-colors px-2 ${
           featured ? "border-brutal-lg" : ""
@@ -72,6 +75,6 @@ export function ProjectCard({
           ))}
         </CardFooter>
       </Card>
-    </a>
+    </Wrapper>
   );
 }
